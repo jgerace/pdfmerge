@@ -1,12 +1,12 @@
 import argparse
 from pathlib import Path
-from PyPDF2 import PdfFileReader, PdfFileMerger
+from PyPDF2 import PdfFileReader, PdfMerger
 
 
 def merge(output_file, files):
     output_file = output_file[0]
 
-    merger = PdfFileMerger()
+    merger = PdfMerger()
 
     for file in files:
         merger.append(str(file))
